@@ -14,7 +14,7 @@ def home():
         api_data = api_link.json()
 
         if api_link.status_code != 200 or api_data.get("cod") != 200:
-            return render_template("home.html", error="Invalid city name or unable to fetch weather data.")
+            return render_template("templates/home.html", error="Invalid city name or unable to fetch weather data.")
         else:
             location = api_data['name']
             temp_city = api_data['main']['temp'] - 273.15
@@ -24,7 +24,7 @@ def home():
             date_time = datetime.now().strftime("%d %b %Y | %I:%M:%S %p")
             day = datetime.now().strftime("%A")
 
-            return render_template("weather.html",
+            return render_template("templates/weather.html",
                                    location=location,
                                    day=day,
                                    date_time=date_time,
@@ -33,7 +33,7 @@ def home():
                                    hmdt=hmdt,
                                    wind_speed=wind_speed)
 
-    return render_template("home.html")
+    return render_template("templates/home.html")
 
 # Vercel handler
 def handler(environ, start_response):
