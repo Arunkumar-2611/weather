@@ -39,5 +39,14 @@ def home():
 def handler(environ, start_response):
     return app.wsgi_app(environ, start_response)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+from http.server import BaseHTTPRequestHandler
+
+def process(base):
+    if isinstance(base, type) and issubclass(base, BaseHTTPRequestHandler):
+        print("Valid HTTP handler base")
+    else:
+        print(f"Invalid base: {base} (type: {type(base)})")
+
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
