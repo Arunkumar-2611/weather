@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arunkumar-2611/wether_pro.git"
+    "url": "git+https://github.com/Arunkumar-2611/weather.git"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Arunkumar-2611/wether_pro/issues"
   },
-  "homepage": "https://github.com/Arunkumar-2611/wether_pro#readme",
+  "homepage": "https://github.com/Arunkumar-2611/weather#readme",
   "dependencies": {
     "express": "^5.1.0"
   }
